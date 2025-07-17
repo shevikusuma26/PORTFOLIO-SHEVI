@@ -1,0 +1,339 @@
+/* Root Variables for Theme Colors and Fonts */
+:root {
+  --primary-color: #be4092;
+  --primary-light: #eca5d3;
+  --background-light: #e5ecfb;
+  --text-dark: #333;
+  --white: #fff;
+  --black: #000;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  --transition: 0.3s ease;
+  --font-main: "Segoe UI", "Poppins", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.home .btn {
+  margin: 4rem 0;
+}
+.socials {
+  margin-top: 12rem;
+}
+.home .image img {
+  margin-top: -12rem;
+}
+.home .content p,
+.home .content p span {
+  font-size: 2.2rem;
+}
+
+/* Experience Section */
+.experience {
+  min-height: 80vh;
+}
+.experience .timeline {
+  margin-top: 2rem;
+}
+.experience .timeline::after {
+  left: 31px;
+}
+.experience .container {
+  width: 100%;
+  padding-left: 8rem;
+  padding-right: 2rem;
+}
+.experience .container::after {
+  font-size: 2.2rem;
+}
+.experience .container::before {
+  left: 61px;
+  border: medium solid var(--primary-color);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--primary-color) transparent transparent;
+}
+.experience .left::after,
+.experience .right::after {
+  left: 15px;
+}
+.experience .right {
+  left: 0%;
+}
+.morebtn {
+  margin-top: 3rem;
+}
+
+/* Contact Section */
+.contact {
+  background: var(--background-light);
+  min-height: 60vh;
+}
+.contact .container {
+  max-width: 1050px;
+  width: 100%;
+  background: var(--white);
+  border-radius: 1.5rem;
+  margin: 2rem 5rem;
+  box-shadow: var(--box-shadow);
+}
+.contact .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+}
+.contact .image-box {
+  max-width: 60%;
+  margin-left: 4rem;
+}
+.contact .image-box img {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+.contact form {
+  width: 45%;
+  margin-right: 3.5rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-group .field,
+.message {
+  position: relative;
+  margin: 1rem;
+  width: 100%;
+}
+.field {
+  height: 50px;
+  display: flex;
+}
+form i,
+.message i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: var(--text-dark);
+  font-size: 17px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+input,
+textarea {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: var(--font-main);
+  background: var(--background-light);
+  padding: 0 16px 0 48px;
+  border: 1px solid var(--text-dark);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-dark);
+}
+input:focus,
+textarea:focus {
+  padding-left: 47px;
+  border: 2px solid var(--primary-color);
+}
+input:focus ~ i,
+textarea:focus ~ i {
+  color: var(--primary-color);
+}
+textarea {
+  min-height: 130px;
+  max-height: 230px;
+  padding: 12px 20px 0 48px;
+  resize: none;
+}
+textarea::-webkit-scrollbar {
+  width: 0;
+}
+.button-area {
+  display: flex;
+  flex-direction: row-reverse;
+  float: right;
+}
+.button-area button {
+  background: #2506ad;
+  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  color: var(--white);
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  padding: 13px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.button-area button:hover {
+  background: #421cec;
+}
+.button-area button i {
+  position: relative;
+  top: 6px;
+  left: 2px;
+  font-size: 1.5rem;
+  color: var(--white);
+  transition: var(--transition);
+}
+.button-area button:hover i {
+  left: 8px;
+}
+
+/* Footer Section */
+.footer {
+  background: rgb(0, 1, 43);
+  padding-top: 0;
+}
+.footer .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .box {
+  flex: 1 1 25rem;
+  margin: 2.5rem;
+}
+.footer h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+.footer p,
+.footer a {
+  font-size: 1.5rem;
+  color: #ccc;
+  padding: 0.7rem 0;
+  text-transform: none;
+}
+.footer a:hover {
+  color: var(--primary-light);
+}
+.footer .share a {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  margin-right: 1rem;
+  background: #eee;
+  color: #02094b;
+  border-radius: 5rem;
+  transition: 0.2s;
+}
+.footer .share a:hover {
+  background: transparent;
+  transform: scale(0.98);
+  border: 0.1rem solid #b4b2b2;
+  color: var(--primary-color);
+}
+.footer .credit {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0 0 0;
+  border-top: 0.1rem solid #fff3;
+}
+.footer .credit a {
+  color: var(--primary-light);
+}
+
+/* Scroll Top */
+#scroll-top {
+  position: fixed;
+  top: -140%;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  transition: 1s linear;
+  z-index: 1000;
+}
+#scroll-top.active {
+  top: calc(100% - 12rem);
+}
+#scroll-top:hover {
+  background: var(--primary-light);
+  transform: scale(1.1);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .contact {
+    min-height: 70vh;
+  }
+  .contact .container {
+    margin: 3rem 0 2rem;
+  }
+  .contact .content {
+    padding: 18px 12px;
+  }
+  .contact .image-box {
+    display: none;
+  }
+  .contact form {
+    width: 100%;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    padding-right: 0;
+  }
+  section {
+    padding: 2rem;
+  }
+  .footer .box {
+    margin: 1.5rem;
+  }
+  .footer p {
+    padding: 0.7rem;
+  }
+  .footer .share a {
+    padding: 1.2rem;
+  }
+}
+
+/* Animation */
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+.footer .fa {
+  color: red;
+  margin: 0 0.3rem;
+  font-size: 1.5rem;
+  animation: pound 0.35s infinite alternate;
+}
